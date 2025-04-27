@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Signup Page{% endblock %}
+
+{% block extra_css %}     
+<link href="{% static 'CSS/signup.css' %}" rel="stylesheet">
+<script src="{% static 'JS/signup.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+            <form method="POST" action="{% url 'register' %}">
+                {% csrf_token %}
+                <h3>Signup Form</h3>
+                
+                <!-- Personal Information Fields -->
+                <label for="Firstname">First Name:</label>
+                <input type="text" id="Firstname" name="Firstname" placeholder="Eg: John" required><br>
+        
+                <label for="Lastname">Last Name:</label>
+                <input type="text" id="Lastname" name="Lastname" placeholder="Eg: Doe"required><br>
+        
+                <label for="Mobileno">Mobile No:</label>
+                <input type="text" id="Mobileno" name="Mobileno" placeholder="Eg: +91 95634 567 80" required><br>
+        
+                <label for="Email">Email:</label>
+                <input type="email" id="Email" name="Email" placeholder="Eg: johndoe@example.com" required><br>
+        
+                <label for="Password">Password:</label>
+                <input type="password" id="Password" name="Password" placeholder="Eg: ********" required><br>
+        
+                <label for="Location">Location:</label>
+                <input type="text" id="Location" name="Location" placeholder="Eg: Hyderabad" required><br>
+        
+                <label for="Zipcode" maxlength="6">Zipcode:</label>
+                <input type="number" id="Zipcode" name="Zipcode" placeholder="Eg: 12345" required><br>
+        
+                <label for="Gender">Gender:</label>
+                <select id="Gender" name="Gender">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select><br>
+        
+                <label for="Usertype">Usertype:</label>
+                <select id="Usertype" name="Usertype" onchange="userFields()">
+                    <option value="">Select User Type</option>
+                    <option value="Patient">Patient</option>
+                    <option value="Doctor">Doctor</option>
+                </select><br>
+        
+                <div id="patient-fields" style="display: none;">
+                    <label for="Cause">Cause/Reason:</label>
+                    <input id="Cause" name="Cause" value="NA" placeholder="Describe any past medical conditions"><br>
+                
+                    <label for="Age">Age:</label>
+                    <input type="number" id="Age" value="0" name="Age" placeholder="Eg: 28"><br>
+                
+                    <label for="Insurance">Insurance Number:</label>
+                    <input type="text" id="Insurance" name="Insurance" value="NA"  placeholder="If applicable"><br>
+                </div>
+        
+        
+        
+                <div id="doctor-fields" style="display: none;">
+                    <label for="Specialization">Specialization:</label>
+                    <select id="Specialization" name="Specialization" required>
+                        <option value="NA">NA</option>
+                        <option value="Cardiologist">Cardiologist</option>
+                        <option value="Dermatologist">Dermatologist</option>
+                        <option value="Endocrinologist">Endocrinologist</option>
+                        <option value="Gastroenterologist">Gastroenterologist</option>
+                        <option value="General_physician">General Physician</option>
+                        <option value="Gynecologist">Gynecologist</option>
+                        <option value="Neurologist">Neurologist</option>
+                        <option value="Nephrologist">Nephrologist</option>
+                        <option value="Oncologist">Oncologist</option>
+                        <option value="Orthopedic">Orthopedic</option>
+                        <option value="Pediatrician">Pediatrician</option>
+                        <option value="Psychiatrist">Psychiatrist</option>
+                        <option value="Pulmonologist">Pulmonologist</option>
+                        <option value="Radiologist">Radiologist</option>
+                        <option value="Surgeon">Surgeon</option>
+                        <option value="Urologist">Urologist</option>
+                        <option value="Ent_specialist">ENT Specialist</option>
+                        <option value="Ophthalmologist">Ophthalmologist</option>
+                        <option value="Dentist">Dentist</option>
+                        <option value="Physiotherapist">Physiotherapist</option>
+                        <option value="Others">Others</option>
+                    </select><br>
+                
+        
+                    <label for="Availability">Availability:</label>
+                    <select id="Availability" name="Availability" required>
+                        <option value="NA">NA</option>
+                        <option value="Available">Available</option>
+                        <option value="Not Available">Not Available</option>
+                    </select><br>
+        
+                    <label for="Experience">Experience:</label>
+                    <input type="number" id="Experience" value="0" name="Experience" required><br>
+                </div>
+        
+                <button type="submit">Sign Up</button>
+            </form>
+            <center><p>Note: All fields are requires</p>
+                <p>If you are already register login here:   <a href="{% url 'login' %}">Login</a></center>   
+{% endblock %}
+

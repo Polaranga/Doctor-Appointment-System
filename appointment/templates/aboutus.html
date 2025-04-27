@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Aboutus Page{% endblock %}
+
+{% block extra_css %}
+<link href="{% static 'CSS/aboutus.css' %}" rel="stylesheet">
+{% endblock %}
+
+
+
+{% block content %}
+<main class="text-center">
+    <!-- Banner Image -->
+    <h1>Doctor Appointment Portal</h1>
+    <div class="mb-4">
+        <img src="{% static 'Images/banner.png' %}" alt="Healthcare Banner" class="img-fluid w-100 rounded">
+    </div>
+
+    <h1>About Us</h1>
+    <p class="lead">Welcome to our Doctor Appointment Portal! Our goal is to connect patients with top doctors quickly and efficiently, ensuring they receive the best healthcare possible.</p>
+
+    <h3>Our Mission</h3>
+    <p>At our core, we strive to make healthcare more accessible. With the growing demand for remote healthcare services, we aim to bring together a network of qualified healthcare professionals and patients in one platform. Our goal is to simplify the process of booking medical consultations and provide 24/7 support to help patients in need.</p>
+
+    <h3>What We Offer</h3>
+    <p>Our portal is designed to facilitate seamless interaction between patients and healthcare providers. Here’s what we offer:</p>
+    <ul>
+        <li><strong>Easy Appointment Booking:</strong> Patients can book appointments with doctors from a wide range of specialties using just a few clicks.</li>
+        <li><strong>Verified Doctors:</strong> We work with certified, experienced doctors who are committed to providing quality care.</li>
+        <li><strong>24/7 Support:</strong> Our support team is available around the clock to assist with scheduling, inquiries, and troubleshooting.</li>
+        <li><strong>Secure & Confidential:</strong> Patient privacy and security are our top priorities. All personal and medical data is protected by state-of-the-art encryption.</li>
+    </ul>
+
+    <h3>Why Choose Us?</h3>
+    <p>We are dedicated to providing a hassle-free, reliable, and efficient platform for all your healthcare needs. Here’s why you should choose our Doctor Appointment Portal:</p>
+    <ul>
+        <li><strong>Convenience:</strong> Book an appointment from anywhere, at any time, with just a few clicks.</li>
+        <li><strong>Comprehensive Care:</strong> We have doctors available in various specialties, so you can find the right professional for your needs.</li>
+        <li><strong>Quick Response:</strong> Get instant confirmation for appointments, and enjoy minimal wait times.</li>
+        <li><strong>Customer-Centric:</strong> Our support team is available 24/7 to ensure your questions are answered and issues are resolved promptly.</li>
+    </ul>
+
+    <div class="row mt-5">
+        <!-- Image for Experienced Doctors -->
+        <div class="col-md-4">
+            <img src="{% static 'Images/doctor_team.png' %}" alt="Doctor Team" class="img-fluid about-img rounded">
+            <h5>Experienced Doctors</h5>
+            <p>Our doctors are certified, experienced, and specialized in different fields of medicine, ensuring the highest quality of care.</p>
+        </div>
+        
+        <!-- Image for Easy Appointment Booking -->
+        <div class="col-md-4">
+            <img src="{% static 'Images/appointment1.png' %}" alt="Appointment Booking" class="img-fluid about-img rounded">
+            <h5>Easy Appointment Booking</h5>
+            <p>Booking an appointment is simple. Choose a doctor, select a time, and get confirmed — all within minutes!</p>
+        </div>
+        
+        <!-- Image for 24/7 Support -->
+        <div class="col-md-4">
+            <img src="{% static 'Images/24_7_support.png' %}" alt="24/7 Support" class="img-fluid about-img rounded">
+            <h5>24/7 Customer Support</h5>
+            <p>Our dedicated support team is here for you anytime, ensuring your experience is seamless and stress-free.</p>
+        </div>
+    </div>
+
+    <h3>Our Requirements</h3>
+    <p>To ensure smooth service, we ask that patients meet the following requirements:</p>
+    <ul>
+        <li>Access to a device with an internet connection (smartphone, tablet, or computer).</li>
+        <li>A valid email address for appointment confirmation and notifications.</li>
+        <li>For telehealth consultations, a reliable internet connection and webcam for video calls.</li>
+    </ul>
+</main>
+{% endblock %}

@@ -1,0 +1,40 @@
+h1 {
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.lead {
+    margin-bottom: 40px;
+}
+
+.contact-cards {
+    row-gap: 30px;
+    margin-top: 30px;
+}
+
+.contact-item {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.contact-item .icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+    border-radius:15px;
+    transition: transform 0.2s;
+}
+
+.contact-item .icon:hover {
+    transform: scale(1.1);
+}
+
+.contact-item a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
